@@ -1,0 +1,10 @@
+Sum from 1 to n of i*i! = (n+1)! - 1.
+
+Proof: (this does not hold)
+
+Base step: n = 1
+1 = 2! - 1
+
+Induction Step:
+
+(n+2)! - 1 - [(n+1)! - 1] = (n+2)! - (n+1)! = (n+2 - 1)*(n+1)! = (n+1)*(n+1)!
