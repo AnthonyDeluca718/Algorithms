@@ -1,13 +1,15 @@
 def optimal(arr):
-  output = []
   intervals = sorted(arr, key = lambda a: a[1])
-  while (False):
-    pass
+  i = 0
+  output = []
+  while (i < len(intervals)):
+    output.append(intervals[i])
+    end_time = intervals[i][1]
+    i += 1
+    while (i < len(intervals) and intervals[i][0] < end_time):
+      i += 1
+  return output
 
 
-# arr = [[1, 2], [0, 1.5], [5, 1.6]]
-# optimal(arr)
-# print(arr)
-
-arr = [1, 2, 3, 4, 5, 6, 7, 8 ,9]
-print([x for x in arr if x > 4])
+arr = [[1, 2], [1.5, 3], [0, 1], [5, 5.6], [1.6, 1.8]]
+print( optimal(arr) )
