@@ -22,4 +22,20 @@ induction: An -> An*x + An-1 -> ... -> An*x^n + ALG(An-1) where ALG(An-1) is the
 9) Bubblesort:
 Bubble sorting an array of length n entails first pushing the largest element to the last position then bubble sorting the first n-1 elements. By induction this results in SORTED_ARRAY.concat(X) where X is >= all elements in SORTED_ARRAY.
 
-=== Skipping Induction
+(Skipping Induction)
+
+=== Estimation:
+
+19)
+
+20)
+
+21)
+
+22)
+
+23)
+
+24)
+
+25)
