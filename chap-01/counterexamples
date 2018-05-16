@@ -12,9 +12,14 @@ c - S = {1, 2}, T = 1
 6) N = 6. S1 = {1,2,3}, S2 = {4,5,6}, S3 = {2,3,4,5}
 
 7)
+Assume mult(y, x) = y*x for all y and all x < z (this holds for z = 0)
+mult (y, z) = mult(cy, [z / c]) + y*(z % c) = cy*[z/c] +  y*(z % c) = cy*(z - z%c)/c +  y*(z % c) = yz
 
-8)
+8) P(x) = an*x^n +an−1*x^n−1 +...+a1*x + a0
+base case: n=0 p = a0 -> immediately return a0 which is correct
+induction: An -> An*x + An-1 -> ... -> An*x^n + ALG(An-1) where ALG(An-1) is the result of running the algorithm starting with An-1.
 
-9)
+9) Bubblesort:
+Bubble sorting an array of length n entails first pushing the largest element to the last position then bubble sorting the first n-1 elements. By induction this results in SORTED_ARRAY.concat(X) where X is >= all elements in SORTED_ARRAY.
 
 === Skipping Induction
