@@ -1,0 +1,9 @@
+# 1-29. [5] There are 25 horses. At most, 5 horses can race together at a time. You must determine the fastest, second fastest, and third fastest horses. Find the minimum number of races in which this can be done.
+
+-- 6 races => get the fast horse (race all the winners from the first five races)
+
+-- At this point you know the second fastest horse is either second place in the winning horse's bracket or second place in the winner's bracket.
+
+-- Where can the third place horse be? Gotta be one of the stage1 winners that got 2nd/3rd. Or one of the horses that scored 2nd/3rd in the winning horse's group. Or the horse that got 2nd in the group of the horse that got second in race6. That is five horses. So just race them.
+
+Answer: 7 races
