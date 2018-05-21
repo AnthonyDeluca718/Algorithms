@@ -18,4 +18,19 @@ The splitting term does not appear; the recursive tree structure dominates.
 case: f(n) = Theta(n^C * log(n)^k) -> Theta(n^C * log(n)^k+1)
 Work to split/recombine a problem is comparable to subproblems. f(n) rangebound by the critical-exponent polynomial, times zero or more optional log s.
 
-proof of case 1:
+proof of case 1 (sketch):
+T(n) = a*T(n/b) + f(n)
+<= a*T(n/b) + C*n^k (k < C)
+<= a*T(n/b) + C*a*(n/a^(1/k))^k
+<= a*T(n/b) + a*C*(n/b)^k
+...
+<= a^(log_bas_b(n))*(T(1) + C*1^k)
+
+what does a^(log_bas_b(n)) equal?
+
+a^(log_bas_b(n)) = n^x
+log_bas_b(n)*log(a) = x*log(n)
+log(n)/log(b) * log(a) = x*log(n)
+=> x = log(a)/log(b) = C = critical exponent
+
+=== 
