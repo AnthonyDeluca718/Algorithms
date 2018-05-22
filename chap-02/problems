@@ -14,3 +14,23 @@ d) yes both are theta(n)
 33)
 S(n+1) = 3*S(n) because each element is added to the sum three times
 => S(n) = 3^n
+
+=== Interview Problems:
+
+43) Let Pn+1 = probability you add the (n+1)th element to the set and randomly replace
+Pn+1 = (k/n)*(1 - Pn+1) + (k/n)*Pn+1*(1 - 1/k)
+Pn+1 = (k/n)*(1 - Pn+1/k) = k/n + Pn+1/n
+Pn+1*[(n+1)/n] = (k/n)
+Pn+1 = k/(n+1)
+
+note: Pn+1 had to be k/n+1 because all elements have to be in the set with that probability. Above can be considered a longer justification
+
+44) Save value n on nodes n-1, n, n+1 (mod 1000 of course). If three nodes fail you can only lose a single node.
+
+45) TODO
+
+46) Goal: Minimize Regret. So if we don't break on floor n we move up n-1 floors, then we move up n-2 floors, etc
+
+n + (n-1) + ... + 1 = 100
+n(n+1)/2 = 100
+=> n = 13.65 which we round up to 14
