@@ -27,10 +27,29 @@ note: Pn+1 had to be k/n+1 because all elements have to be in the set with that 
 
 44) Save value n on nodes n-1, n, n+1 (mod 1000 of course). If three nodes fail you can only lose a single node.
 
-45) TODO
+45) T(n) = SUM i=0 to n of 1/n = nth harmonic partial sum.
+proof:
+T(n+1) = 1 + 1/(n+1)*[SUM(0, n) T(i)]
+= 1 + n/(n+1) * 1/n*[SUM(0, n-1) T(i)] + 1/(n+1)*T(n)
+= 1/(n+1) + n/(n+1)*(1 + 1/n*[SUM(0, n-1) T(i)]) + 1/(n+1)*T(n)
+= 1/(n+1) + T(n)
 
 46) Goal: Minimize Regret. So if we don't break on floor n we move up n-1 floors, then we move up n-2 floors, etc
 
 n + (n-1) + ... + 1 = 100
 n(n+1)/2 = 100
 => n = 13.65 which we round up to 14
+
+47) Assume the bags have enough coins. Take 1 coin from bag1, 2 from bag2, 3 from bag 3, etc.
+
+48) You can find the ball in log_base_3(n) step. Split the balls into 2 equal piles which you put on balance and a third pile which can be smaller or equal. if one pile is smaller weight it contains the lighter ball. If the piles are equal you know the ball is in the unweighed pile.
+
+49) T(n) = (n choose 2)*T(n-1) = n*(n-1)/2 * T(n-1)
+so T(n) = n!*(n-1)!/(2^n)
+this assume only two company non-simultaneous merges
+
+50) Compute all cubes 1, ... n^3. Then create a hash that contains all sums of two cubes and the number of times the pair occurs. Filter for sums that appear tow or more times.
+
+51)
+
+52)
