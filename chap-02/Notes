@@ -5,8 +5,13 @@ Neither assumption is true
 
 === Best, Worst, Average Case Running Time:
 O(n) = an upper bound
-Theta(n) = optimal upper bound (up to a constant factor)
+Theta(n) = optimal upper bound (up to constant factors)
 f(n) = o(g(n)) means that g dominates f, f(n)/g(n) -> 0 as n -> inf
+
+=== Harmonic Identity:
+Sum(1, n) 1/i ~ log(n)
+
+Proof: Consider upper and lower Riemann sums of 1/x and note INT(1, n) 1/x = log(n)
 
 === Master Theorem:
 T(n) = a*T(n/b) + f(n)
@@ -33,4 +38,4 @@ log_bas_b(n)*log(a) = x*log(n)
 log(n)/log(b) * log(a) = x*log(n)
 => x = log(a)/log(b) = C = critical exponent
 
-=== 
+===
