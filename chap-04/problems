@@ -1,0 +1,18 @@
+40) Normal quicksort with mean of three pivots: O(n) storage, n*log(n) time (unless something crazy happens)
+Could use in place to save space or random pivot if we are worried about adversarial inputs.
+
+41)
+-- Quicksort: Probably the fastest on a normal computer, not easily parallel, not stable, only nlog(n) stochastically, can be done in place
+-- Mergesort: quite fast, nlog(n), stable, easy parallelize, not doable in place
+-- Insertion sort: fast for very small arrays (n ~6), not useful for large arras since its n^2, useful to sort the small arrays that result when applying merge or quicksort
+
+46)
+
+Step 1: Weigh 4 coins vs 4 coins -> If they weigh the same you know its in the remaining 4 coins and the problem is easy*
+Step 2: Assume {1, 2, 3, 4} > {5, 6, 7, 8}. Weigh {1, 2, 5} vs {3, 6, 9}. If they are equal its easy **.
+{125} < {369} -> 5 is a light coin or 3 is a heavy coin
+{125} == {369} -> either 4 is heavy or one of 7/8 is light => weigh 7 vs 8
+{125} > {369} -> either {12} has a heavy coin or 5 is a light coin => weigh 1 vs 2
+
+*: Weight 2 coins, if they are equal weigh one of the remaining two coins vs one of the equal coins. If they are inequal weigh one of the equal coins vs one of the remaining two coins.
+**: Just weigh one of the remaining 2 coins with one of the 10 coins that have been weighed before and are known to be equal
