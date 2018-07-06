@@ -4,6 +4,7 @@ Could use in place to save space or random pivot if we are worried about adversa
 41)
 -- Quicksort: Probably the fastest on a normal computer, not easily parallel, not stable, only nlog(n) stochastically, can be done in place
 -- Mergesort: quite fast, nlog(n), stable, easy parallelize, not doable in place
+-- heapsort: #TODO
 -- Insertion sort: fast for very small arrays (n ~6), not useful for large arras since its n^2, useful to sort the small arrays that result when applying merge or quicksort
 
 46)
