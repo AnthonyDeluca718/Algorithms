@@ -12,10 +12,6 @@ Part 1: 8
 
 4-36 - Consider an n × n array A containing integer elements (positive, negative, and zero). Assume that the elements in each row of A are in strictly increasing order, and the elements of each column of A are in strictly decreasing order. (Hence there cannot be two zeroes in the same row or the same column.) Describe an efficient algorithm that counts the number of occurrences of the element 0 in A. Analyze its running time.
 
-4-42 - Implement an algorithm that takes an input array and returns only the unique elements in it.
-
-4-44 - Design a stack that supports push, pop, and retrieving the minimum element in constant time. Can you do this?
-
 
 Part 2: 10
 
