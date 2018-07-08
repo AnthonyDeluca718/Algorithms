@@ -1,0 +1,4 @@
+== Fundamental Abstract Types: Containers, Dictionaries, Priority Queues - Implement with lists and arrays
+
+== Dyanmic Arrays:
+At worst half the element 'moved' once, a quarter moved twice, etc. So the total amount of moves is 1/2 + 1/4  + 1/8 + ... = 1. So the amount of copying is O(n)
