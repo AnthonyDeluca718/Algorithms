@@ -33,7 +33,6 @@ class Hash:
       return None
 
   def rebuild(self):
-    print('rebuild')
     self.pile_count = gmpy2.next_prime(2 * self.pile_count)
     current_piles = self.piles
     self.piles = [[] for x in range(self.pile_count)]
@@ -41,21 +40,14 @@ class Hash:
       for pair in pile:
         self.set(pair[0], pair[1])
 
-
-hash_map = Hash()
-
-hash_map.set('A', 1)
-hash_map.set('B', 2)
-hash_map.set('C', 3)
-for n in range(100):
-  hash_map.set(str(n), n)
-hash_map.set('100', 'one hundred')
-
-print(hash_map.get('A'))
-print(hash_map.get('99'))
-print(hash_map.get('100'))
-
-# n = 2
-# while n < 10000:
-#   print(n)
-#   n = gmpy2.next_prime(2*n)
+  def remove(self, key):
+    location = self.find(key)
+    if location:
+      self.count = self.count - 1
+      pile = self.piles[location[0]]
+      el = pile[location[1]][1]
+      del pile[location[1]]
+      # pile.remove[el]
+      return el
+    else:
+      return None
