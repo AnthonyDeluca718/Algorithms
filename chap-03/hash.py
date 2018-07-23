@@ -47,7 +47,6 @@ class Hash:
       pile = self.piles[location[0]]
       el = pile[location[1]][1]
       del pile[location[1]]
-      # pile.remove[el]
       return el
     else:
       return None

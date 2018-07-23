@@ -1,8 +1,13 @@
-Structures: 8
--- Linked list
--- Dynamic Circular Array
--- Queue (2 array method)
+Data Structures: 5
+-- Dynamic Circular Array from 'C-Array': push, insert_middle, slice, delete, sort, pop, length
+-- Python Node Classes: Next, First, val
+-- Linked-List Class: Search, insert, delete
+-- Queue (FIFO): Enqueue, Dequeue
 -- Binary Tree class
+
+
+
+Sorting: 4
 -- Heapsort
 -- Quicksort (in place)
 -- Mergesort

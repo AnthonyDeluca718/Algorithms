@@ -1,5 +1,0 @@
--- Normal Array from 'C-Array': push, insert_middle, slice, delete, sort, pop, length
--- Python Node Classes: Next, First, val
--- Linked-List Class: Search, insert, delete
--- Stack (LIFO): Push, Pop, Empty, Length
--- Queue (FIFO): Enqueue, Dequeue
