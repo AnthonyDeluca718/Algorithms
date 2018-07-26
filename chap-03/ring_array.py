@@ -1,10 +1,10 @@
 # shift
 # unshift
-# push
+# push - done
 # pop
-# set
-# get
-# length
+# set - done
+# get - done
+# length - done
 
 class CArray:
   def __init__(self, length):
@@ -29,6 +29,9 @@ class RingArray:
   def get(self, idx):
     return self.arr.get(self.index(idx))
 
+  def set(self, idx, val):
+    self.arr.set(self.index(idx), val)
+
   def rebuild(self):
     self.max_len = 2*self.max_len
     new_list = CArray(self.max_len)
@@ -39,19 +42,22 @@ class RingArray:
 
   def push(self, val):
     if (self.length < self.max_len):
-      self.arr.set(self.index(self.length), val)
+      self.set(self.length, val)
       self.length = self.length + 1
     else:
       self.rebuild()
       self.push(val)
 
+
 my_array = RingArray()
 my_array.push(1)
 my_array.push(2)
+my_array.set(1, 10)
 my_array.push(3)
 my_array.push(4)
 my_array.push(5)
 my_array.push(6)
+my_array.set(3, -10)
 
 print(my_array.get(0))
 print(my_array.get(1))
