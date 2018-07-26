@@ -1,5 +1,5 @@
-# shift
-# unshift
+# shift - done
+# unshift - done
 # push - done
 # pop - done
 # set - done
@@ -35,12 +35,12 @@ class RingArray:
       self.arr.set(self.index(idx), val)
 
   def rebuild(self):
-    self.max_len = 2*self.max_len
-    new_list = CArray(self.max_len)
+    new_list = CArray(2 * self.max_len)
     for j in range(self.length):
       new_list.set(j, self.get(j))
     self.start = 0
     self.arr = new_list
+    self.max_len = 2*self.max_len
 
   def push(self, val):
     if (self.length < self.max_len):
@@ -56,23 +56,52 @@ class RingArray:
       self.length = self.length - 1
       return ret
 
+  def shift(self):
+    if (self.length > 0):
+      ret = self.get(0)
+      self.start = self.start + 1
+      self.length = self.length - 1
+      return ret
+
+  def unshift(self, val):
+    if (self.length < self.max_len):
+      self.start = self.start - 1
+      self.arr.set(self.index(0), val)
+      self.length = self.length + 1
+    else:
+      self.rebuild()
+      self.unshift(val)
 
 my_array = RingArray()
-my_array.push(1)
 my_array.push(2)
-my_array.set(0, 10)
 my_array.push(3)
+my_array.unshift(1)
 my_array.push(4)
+my_array.unshift(0)
+print(my_array.shift())
 my_array.push(5)
-my_array.push(6)
-my_array.set(3, -10)
+print(my_array.shift())
+print(my_array.shift())
+print(my_array.shift())
+print(my_array.shift())
+print(my_array.shift())
 
-print(my_array.pop())
-print(my_array.pop())
-print(my_array.pop())
-print(my_array.pop())
-print(my_array.pop())
-print(my_array.pop())
+# my_array = RingArray()
+# my_array.push(1)
+# my_array.push(2)
+# my_array.set(0, 10)
+# my_array.push(3)
+# my_array.push(4)
+# my_array.push(5)
+# my_array.push(6)
+# my_array.set(3, -10)
+#
+# print(my_array.pop())
+# print(my_array.pop())
+# print(my_array.pop())
+# print(my_array.pop())
+# print(my_array.pop())
+# print(my_array.pop())
 
 # print(my_array.get(0))
 # print(my_array.get(1))
