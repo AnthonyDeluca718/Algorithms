@@ -1,3 +1,6 @@
-1) string finder code (Rabin-Kahn + Knuth Moser)
+1) Strings
+-- Knuth Moser
+-- Rabin Karp
+-- Compressed Suffix Trees
 
-2) 
+2)

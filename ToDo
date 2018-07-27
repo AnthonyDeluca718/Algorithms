@@ -1,8 +1,8 @@
 Data Structures: 4
 -- Python Node Classes: Next, First, val
 -- Linked-List Class: Search, insert, delete
--- Binary Tree class
-
+-- BST as linked list
+-- Max Heap Class (include using it as a priority queue) -- bubble down, bubble up + use bubble down to construct in linear time
 
 
 Sorting: 4
@@ -10,6 +10,7 @@ Sorting: 4
 -- Quicksort (in place)
 -- Mergesort
 -- Insertion Sort
+-- Correctly Binary Search an array
 
 
 
