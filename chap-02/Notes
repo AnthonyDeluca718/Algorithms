@@ -31,11 +31,9 @@ T(n) = a*T(n/b) + f(n)
 ...
 <= a^(log_bas_b(n))*(T(1) + C*1^k)
 
-what does a^(log_bas_b(n)) equal?
+what does a^(log_base_b(n)) equal?
 
 a^(log_bas_b(n)) = n^x
 log_bas_b(n)*log(a) = x*log(n)
 log(n)/log(b) * log(a) = x*log(n)
 => x = log(a)/log(b) = C = critical exponent
-
-===

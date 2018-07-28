@@ -1,0 +1,20 @@
+T(n) = aT(n/b) + f(n)
+
+1. If f(n) = o(n^(logb(a)) for some constant ε > 0, then T(n) = Theta(n^logb(a)).
+2. If f(n) = Theta(n^logb(a)), then T(n) = Θ(n * logb(a) * lg(n)).
+3. If f(n) = Omega(n^(logb(a)+ε)) for some constant ε > 0, and if a*f(n/b) ≤ c*f(n) for some c < 1, then T(n) = Theta(f(n)).
+
+Discussion:
+
+Case 1: Too many leaves – If the number of leaf nodes outweighs the sum of the internal evaluation cost, the total running time is O(nlogb a).
+
+Case 2: Equal work per level – As we move down the tree, each problem gets smaller but there are more of them to solve. If the sum of the internal evaluation costs at each level are equal, the total running time is the cost per level (nlogb a) times the number of levels (logb n), for a total running time of O(nlogb a lg n).
+
+Case 3: Too expensive a root – If the internal evaluation costs grow rapidly enough with n, then the cost of the root evaluation may dominate. If so, the the total running time is O(f(n)).
+
+lemma: a^logb(n) = n^logb(a)
+
+a^(logb(n)) = n^x
+logb(n)*log(a) = x*log(n)
+log(n)/log(b) * log(a) = x*log(n)
+=> x = log(a)/log(b) = logb(a)
