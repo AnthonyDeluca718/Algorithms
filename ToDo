@@ -48,3 +48,14 @@ Part 2: 10
 4-39 - Design and implement a parallel sorting algorithm that distributes data across several processors. An appropriate variation of mergesort is a likely candidate. Mea- sure the speedup of this algorithm as the number of processors increases. Later, compare the execution time to that of a purely sequential mergesort implementation. What are your experiences?
 
 4-43 - You have a computer with only 2Mb of main memory. How do you use it to sort a large file of 500 Mb that is on disk?
+
+
+=== Chapter 5:
+
+Graph Data Structure
+--
+--
+--
+--
+--
+--
