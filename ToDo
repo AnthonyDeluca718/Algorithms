@@ -1,7 +1,9 @@
+Total: 16
+
 Data Structures: 4
 -- Python Node Classes: Next, First, val
 -- Linked-List Class: Search, insert, delete
--- BST as linked list
+-- BST as graph
 -- Max Heap Class (include using it as a priority queue) -- bubble down, bubble up + use bubble down to construct in linear time
 
 
@@ -10,12 +12,9 @@ Sorting: 4
 -- Quicksort (in place)
 -- Mergesort
 -- Insertion Sort
--- Correctly Binary Search an array
--- One sided binary search (mostly to jog memory)
--- sqrt alg with bisection
 
 
-Part 2: 9
+Linked Lists: 5
 
 3-20 - Write a function to find the middle node of a singly-linked list.
 
@@ -27,7 +26,7 @@ Part 2: 9
 
 3-27 - Determine whether a linked list contains a loop as quickly as possible without using any extra storage. Also, identify the location of the loop.
 
-4-37 - Implement versions of several different sorting algorithms, such as selection sort, insertion sort, heapsort, mergesort, and quicksort.
+External Sort: 3
 
 4-38 - Implement an external sort, which uses intermediate files to sort files bigger than main memory. Mergesort is a good algorithm to base such an implementation on. Test your program both on files with small records and on files with large records.
 
