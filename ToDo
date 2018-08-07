@@ -1,22 +1,13 @@
-Total: 9
+Total: 7
 
-
-Heap and BST: 2
+Heap: 2
 -- Max Heap Class (include using it as a priority queue) -- bubble down, bubble up + use bubble down to construct in linear time
 -- Heapsort
 
-
-Linked Lists: 5
-3-20 - Write a function to find the middle node of a singly-linked list.
-
+BST Class: 3
+-- BST Class
 3-21 - Write a function to compare whether two binary trees are identical. Identical trees have the same key value at each position and the same structure.
-
-3-22 - Write a program to convert a binary search tree into a linked list.
-
-3-23 - Implement an algorithm to reverse a linked list. Now do it without recursion.
-
-3-27 - Determine whether a linked list contains a loop as quickly as possible without using any extra storage. Also, identify the location of the loop.
-
+3-22 - Write a program to convert a binary search tree into a linked list. (presumably in order?)
 
 External Sort: 2
 4-38 - Implement an external sort, which uses intermediate files to sort files bigger than main memory. Mergesort is a good algorithm to base such an implementation on. Test your program both on files with small records and on files with large records.
