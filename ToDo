@@ -1,21 +1,12 @@
-Total: 16
+Total: 9
 
-Data Structures: 3
--- Python Node Classes: Next, First, val
--- Linked-List Class: Search, insert, delete
--- BST implementation
 
-Heap: 2
+Heap and BST: 2
 -- Max Heap Class (include using it as a priority queue) -- bubble down, bubble up + use bubble down to construct in linear time
 -- Heapsort
 
 
-Sorting: 1
--- Mergesort
-
-
 Linked Lists: 5
-
 3-20 - Write a function to find the middle node of a singly-linked list.
 
 3-21 - Write a function to compare whether two binary trees are identical. Identical trees have the same key value at each position and the same structure.
@@ -26,13 +17,11 @@ Linked Lists: 5
 
 3-27 - Determine whether a linked list contains a loop as quickly as possible without using any extra storage. Also, identify the location of the loop.
 
-External Sort: 3
 
+External Sort: 2
 4-38 - Implement an external sort, which uses intermediate files to sort files bigger than main memory. Mergesort is a good algorithm to base such an implementation on. Test your program both on files with small records and on files with large records.
 
 4-39 - Design and implement a parallel sorting algorithm that distributes data across several processors. An appropriate variation of mergesort is a likely candidate. Mea- sure the speedup of this algorithm as the number of processors increases. Later, compare the execution time to that of a purely sequential mergesort implementation. What are your experiences?
-
-4-43 - You have a computer with only 2Mb of main memory. How do you use it to sort a large file of 500 Mb that is on disk?
 
 
 

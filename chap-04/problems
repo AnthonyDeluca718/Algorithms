@@ -7,6 +7,8 @@ Could use in place to save space or random pivot if we are worried about adversa
 -- heapsort: #TODO
 -- Insertion sort: fast for very small arrays (n ~6), not useful for large arras since its n^2, useful to sort the small arrays that result when applying merge or quicksort
 
+43) - Use an external sort. See problem 4-38
+
 46)
 
 Step 1: Weigh 4 coins vs 4 coins -> If they weigh the same you know its in the remaining 4 coins and the problem is easy*
