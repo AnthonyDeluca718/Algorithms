@@ -1,17 +1,17 @@
 Total: 16
 
-Data Structures: 4
+Data Structures: 3
 -- Python Node Classes: Next, First, val
 -- Linked-List Class: Search, insert, delete
--- BST as graph
+-- BST implementation
+
+Heap: 2
 -- Max Heap Class (include using it as a priority queue) -- bubble down, bubble up + use bubble down to construct in linear time
-
-
-Sorting: 4
 -- Heapsort
--- Quicksort (in place)
+
+
+Sorting: 1
 -- Mergesort
--- Insertion Sort
 
 
 Linked Lists: 5
