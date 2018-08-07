@@ -54,11 +54,11 @@ def quicksort(arr, **indices):
 # quicksort(test)
 # print(test)
 
-import random
-sorted_arr = list(range(100))
-arr = list(range(100))
-
-for x in range(10):
-  random.shuffle(arr)
-  insertion_sort(arr)
-  print(arr == sorted_arr)
+# import random
+# sorted_arr = list(range(100))
+# arr = list(range(100))
+#
+# for x in range(10):
+#   random.shuffle(arr)
+#   insertion_sort(arr)
+#   print(arr == sorted_arr)
