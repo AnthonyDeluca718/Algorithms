@@ -1,20 +1,9 @@
-Total: 7
-
-Heap: 2
--- Max Heap Class (include using it as a priority queue) -- bubble down, bubble up + use bubble down to construct in linear time
--- Heapsort
+Total: 3
 
 BST Class: 3
 -- BST Class
 3-21 - Write a function to compare whether two binary trees are identical. Identical trees have the same key value at each position and the same structure.
 3-22 - Write a program to convert a binary search tree into a linked list. (presumably in order?)
-
-External Sort: 2
-4-38 - Implement an external sort, which uses intermediate files to sort files bigger than main memory. Mergesort is a good algorithm to base such an implementation on. Test your program both on files with small records and on files with large records.
-
-4-39 - Design and implement a parallel sorting algorithm that distributes data across several processors. An appropriate variation of mergesort is a likely candidate. Mea- sure the speedup of this algorithm as the number of processors increases. Later, compare the execution time to that of a purely sequential mergesort implementation. What are your experiences?
-
-
 
 
 
