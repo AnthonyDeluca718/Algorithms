@@ -82,55 +82,111 @@ class BST: #get, set, remove
 
     return left + [self.val] + right
 
-  def left_right(self, key):
-    if self.left and self.left.key == key:
-      return 'left'
-    elif self.right and self.right.key == key:
-      return 'right'
-    else:
-      return None
-
   def new_child(self, key, node):
     if (self.left and self.left.key == key):
+      print('parent: ' + str(self.key))
+      print('left: ' + str(node.key))
       self.left = node
+      node.parent = self
     elif (self.right and self.right.key == key):
+      print('parent: ' + str(self.key))
+      print('right: ' + str(node.key))
       self.right = node
+      node.parent = self
 
   def remove_self(self):
-    print('remove self')
     if self.right:
-      promoted = self.right
-      promoted.left = self.left
+      self.val = self.right.val
+      self.key = self.right.key
+      self.right.remove_self()
+      if (self.right):
+        print(self.right.key > self.key)
+    elif self.left and self.parent:
+      print('parent left')
+      self.parent.new_child(self.key, self.left)
+      # self.val = self.left.val
+      # self.key = self.left.key
+      # self.left.remove_self()
+      # if self.left and self.left.key > self.key:
+      #   self.val, self.left.val = self.left.val, self.val
+      #   self.key, self.left.key = self.left.key, self.key
     elif self.left:
-      promoted = self.left
-      promoted.right = self.right
-    else:
-      self = None
-      return
+      print('no-parent-left: ' + str(selef.left.key))
+      node = self.left
+      self.key = node.key
+      self.val = node.val
+      self.left = node.left
+      self.right = node.right
+      self.left.parent = self
+      self.righ.parent = self
 
-    if self.parent:
-      self.parent.new_child(promoted)
+      if node.left:
+        node.left.parent = self
+      if node.right:
+        node.right.parent = self
+    elif self.parent:
+      if self.parent.left and self.parent.left.key == self.key:
+        self.parent.left = None
+      elif self.parent.right and self.parent.right.key == self.key:
+        self.parent.right = None
+
+  def remove(self, key):
+    node = self.get(key)
+    if (node):
+      node.remove_self()
+
 
 import random
-for count in range(5):
-  sorted_arr = list(range(100))
-  arr = list(range(0, 100))
-  random.shuffle(arr)
-  b = BST(arr[0], arr[0], None)
-  for i in range(1, len(arr)):
-    x = arr[i]
-    b.set(x, x)
+maxima = 30
+# for count in range(5):
+sorted_arr = list(range(maxima))
+# arr = list(range(0, maxima))
+arr = [29, 19, 21, 26, 25, 2, 17, 6, 9, 24, 8, 16, 11, 14, 22, 23, 28, 13, 15, 18, 0, 27, 10, 7, 1, 12, 20, 4, 5, 3]
+# random.shuffle(arr)
+b = BST(arr[0], arr[0], None)
+for i in range(1, len(arr)):
+  x = arr[i]
+  b.set(x, x)
 
-  new_arr=[]
-  itr, _ = b.linked_list
-  while itr:
-    new_arr.append(itr.val)
-    itr = itr.next
+del sorted_arr[4]
+del sorted_arr[2]
+# del sorted_arr[27]
+# del sorted_arr[68]
+# del sorted_arr[86]
+b.remove(4)
+b.remove(2)
+# b.remove(27)
+# b.remove(68)
+# b.remove(86)
+print(True if sorted_arr == b.sorted_values else b.sorted_values)
 
-  print(new_arr == sorted_arr)
+  # def left_right(self, key):
+  #   if self.left and self.left.key == key:
+  #     return 'left'
+  #   elif self.right and self.right.key == key:
+  #     return 'right'
+  #   else:
+  #     return None
+  #
 
 
 
+# for count in range(5):
+#   sorted_arr = list(range(100))
+#   arr = list(range(0, 100))
+#   random.shuffle(arr)
+#   b = BST(arr[0], arr[0], None)
+#   for i in range(1, len(arr)):
+#     x = arr[i]
+#     b.set(x, x)
+#
+#   new_arr=[]
+#   itr, _ = b.linked_list
+#   while itr:
+#     new_arr.append(itr.val)
+#     itr = itr.next
+#
+#   print(new_arr == sorted_arr)
 
 # for count in range(5):
 #   arr = list(range(1, 100))
