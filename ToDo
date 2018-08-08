@@ -1,16 +1,4 @@
-Total: 3
-
-BST Class: 3
--- BST Class
-3-21 - Write a function to compare whether two binary trees are identical. Identical trees have the same key value at each position and the same structure.
-3-22 - Write a program to convert a binary search tree into a linked list. (presumably in order?)
-
-
-
-
-
-
-=== Chapter 5:
+==== Chapter 5:
 
 Graph Data Structure
 --

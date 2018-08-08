@@ -3,3 +3,7 @@
 18) Binary Search
 
 19) Keep them sorted by typer of shirt and color (that puts an order on the shirts if we define an ordering on types and colors so we can bsearch)
+
+21) BST class has an equals method
+
+22) BST class has a linked_list method
