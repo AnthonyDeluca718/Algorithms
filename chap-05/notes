@@ -1,0 +1,24 @@
+Types of Graphs:
+-- Undirected: (v1, v2) in Edges => (v2, v1) in Edges
+-- Unweighted: Edges have no weights, equivalent to all the weights being the same
+-- Simple: No self loops (x, x) in E + no edge appears multiple times (u, v, w1) and (u, v, w2)
+-- Sparse: |E| is O(|V|)
+-- Acyclic: No cycles. Trees are connected, acyclic, undirected graphics.
+-- Directed Acyclic Graphs can represent scheduling. An edge (x, y) implies x must occur before y.
+-- Embedded: The vertices and edges are assigned geometric positions. Thus, any drawing of a graph is an embedding, which may or may not have algorithmic significance.
+-- Implicit:  Built as we use them
+-- Labeled: Each vertex has a unique identifier
+
+Data Structures:
+
+1) Adjacency Matrices:
+-- Adjacency Matrix: A[i, j] = 1 if (vi, vj) is in E. Otherwise A[i, j] = 0
+-- Adjacency Matrices are very wasteful for sparse graphs. Size is always O(|V|^2)
+-- However Adjacency Matrices have O(1) insert/delete/check_included for edges
+-- Adding a new edge is expensive since every row must be modified. This is even worse on numpy style arrays.
+
+2) Adjacency Lists:
+-- Store an array of lists. One linked list per vertex
+-- Each linked list represents the neighbors of the node
+-- Removing an edge is theoretically O(|E|) since you have to go through the list of edges of a node and that node could have all the edges!
+-- 
