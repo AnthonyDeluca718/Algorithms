@@ -10,6 +10,8 @@
 
 # The MultiGraph class uses a dict-of-dict-of-dict-of-dict data structure. The outer dict (node_dict) holds adjacency information keyed by node. The next dict (adjlist_dict) represents the adjacency information and holds edge_key dicts keyed by neighbor. The edge_key dict holds each edge_attr dict keyed by edge key. The inner dict (edge_attr_dict) represents the edge data and holds edge attribute values keyed by attribute names.
 
+# https://bradfieldcs.com/algos/graphs/representing-a-graph/
+
 class Graph:
   def __init__(self, directed=False):
     self.vertices = {}
