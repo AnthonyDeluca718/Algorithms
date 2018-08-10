@@ -46,6 +46,14 @@ class Vertex:
       _, el = nodes.popitem()
       el.breadth_first(func, handled, nodes)
 
+  def depth_first(self, func, handled={}):
+    func(self)
+    handled[self.label] = True
+    for node in self.neighbors:
+      if not node.label in handled:
+        node.depth_first(func, handled)
+
+
   @property
   def neighbors(self):
     return [self.graph.vertices[key] for key in self.adjacency]
@@ -84,7 +92,8 @@ for i in range(10):
 #   print(v.val)
 
 v = g.vertices[0]
-def prine_val(node):
+def print_val(node):
   print(node.val)
 
-v.breadth_first(prine_val)
+# v.breadth_first(print_val)
+v.depth_first(print_val)
