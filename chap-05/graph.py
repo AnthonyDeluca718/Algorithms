@@ -18,6 +18,8 @@
 # graph - pointer to the graph
 # optionally: can have other properties such as a geometric position in space
 
+from collections import deque, OrderedDict
+
 class Edge:
   def __init__(self, weight, data):
     self.weight = weight
@@ -29,12 +31,24 @@ class Vertex:
     self.label = label
     self.val = val
     self.graph = None
-    self.neighbors = {}
+    self.adjacency = {}
     for key in data:
       setattr(self, key, data[key])
 
-  def breadth_first(self, func, nodes={}):
+  def breadth_first(self, func, handled={}, nodes=OrderedDict()):
     func(self)
+    handled[self.label] = True
+    for node in self.neighbors:
+      if not node.label in handled:
+        nodes[node.label] = node
+
+    if len(nodes) > 0:
+      _, el = nodes.popitem()
+      el.breadth_first(func, handled, nodes)
+
+  @property
+  def neighbors(self):
+    return [self.graph.vertices[key] for key in self.adjacency]
 
 
 class Graph:
@@ -48,10 +62,10 @@ class Graph:
 
   def add_edge(self, n1, n2, weight=1, **data):
     edge = Edge(weight, data)
-    self.vertices[n1].neighbors[n2] = edge
+    self.vertices[n1].adjacency[n2] = edge
 
     if not self.directed:
-      self.vertices[n2].neighbors[n1] = edge
+      self.vertices[n2].adjacency[n1] = edge
 
   @property
   def num_vertices(self):
@@ -65,13 +79,12 @@ for i in range(10):
 for i in range(10):
   g.add_edge(i, (i + 1) % 10)
 
-for i in range(10):
-  v = g.vertices[i]
-  print(v.val)
+# for i in range(10):
+#   v = g.vertices[i]
+#   print(v.val)
 
+v = g.vertices[0]
+def prine_val(node):
+  print(node.val)
 
-
-def print_val(vertex):
-  print(vertex.val)
-
-v.breadth_first(print_val)
+v.breadth_first(prine_val)
