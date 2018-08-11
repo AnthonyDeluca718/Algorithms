@@ -1,4 +1,4 @@
-24 - Adding a single directed edge to a directed graph can reduce the number of weakly connected components, but by at most how many components? What about the number of strongly connected components?
+24) Adding a single directed edge to a directed graph can reduce the number of weakly connected components, but by at most how many components? What about the number of strongly connected components?
 
 Weakly Connected: 1. the edge can connect at most two components.
 
@@ -8,4 +8,8 @@ For i=1:n-1 there is a edge from node i to node i+1
 
 In addition there is an edge from node 0 to every other node. this gives n+1 components.
 
-However if we add edge (n, 0) then the entire graph is strongly connected. To get from i to j just travel: i->i+1->...->n->0->j. 
+However if we add edge (n, 0) then the entire graph is strongly connected. To get from i to j just travel: i->i+1->...->n->0->j.
+
+30) Suppose G is a connected undirected graph. An edge whose removal disconnects the graph is called a bridge. Must every bridge e be an edge in a depth-first search tree of G? Give a proof or a counterexample.
+
+Answer: Yes. The only way to get from component A to component B is to cross the edge. If we could add vertexes from both without crossing this edge we would have an alternate path.

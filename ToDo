@@ -1,24 +1,16 @@
-Total: 27
+Total: 24
 
-
-Graph Data Structure (12)
+Graph Data Structure (10)
 -- Discovered / Processed
--- Path between Vertices
+-- Shortest path between Vertices
 -- Maze Solver
--- Connected Components
 -- Two Coloring
 -- process vertex before/after we process all outgoing vertices
 -- edge specific processing
 -- But when we encounter edge (x, y) from x, how can we tell if we have previously traversed the edge from y?
--- finding cycles
--- articulation vertice
+-- Finding cycles
 -- Topological Sort
 -- Find all strongly connected components on a directed Graph
-
-
-Non-coding: (1)
-
-30 - Suppose G is a connected undirected graph. An edge whose removal disconnects the graph is called a bridge. Must every bridge e be an edge in a depth-first search tree of G? Give a proof or a counterexample.
 
 
 Coding: (14)
