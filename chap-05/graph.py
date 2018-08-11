@@ -18,7 +18,7 @@
 # graph - pointer to the graph
 # optionally: can have other properties such as a geometric position in space
 
-from collections import deque, OrderedDict
+from collections import deque
 
 class Edge:
   def __init__(self, weight, data):
@@ -35,16 +35,17 @@ class Vertex:
     for key in data:
       setattr(self, key, data[key])
 
-  def breadth_first(self, func, handled={}, nodes=OrderedDict()):
+  def breadth_first(self, func, enqueued={}, nodes=deque()):
     func(self)
-    handled[self.label] = True
+    enqueued[self.label] = True
     for node in self.neighbors:
-      if not node.label in handled:
-        nodes[node.label] = node
+      if not node.label in enqueued:
+        enqueued[node.label] = True
+        nodes.append(node)
 
     if len(nodes) > 0:
-      _, el = nodes.popitem()
-      el.breadth_first(func, handled, nodes)
+      el = nodes.popleft()
+      el.breadth_first(func, enqueued, nodes)
 
   def depth_first(self, func, handled={}):
     func(self)
@@ -95,5 +96,5 @@ v = g.vertices[0]
 def print_val(node):
   print(node.val)
 
-# v.breadth_first(print_val)
-v.depth_first(print_val)
+v.breadth_first(print_val)
+# v.depth_first(print_val)
