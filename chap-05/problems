@@ -1,0 +1,11 @@
+24 - Adding a single directed edge to a directed graph can reduce the number of weakly connected components, but by at most how many components? What about the number of strongly connected components?
+
+Weakly Connected: 1. the edge can connect at most two components.
+
+Strongly Connected: Arbitrarily many.
+
+For i=1:n-1 there is a edge from node i to node i+1
+
+In addition there is an edge from node 0 to every other node. this gives n+1 components.
+
+However if we add edge (n, 0) then the entire graph is strongly connected. To get from i to j just travel: i->i+1->...->n->0->j. 

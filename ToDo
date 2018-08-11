@@ -1,4 +1,4 @@
-Total: 28
+Total: 27
 
 
 Graph Data Structure (12)
@@ -16,8 +16,7 @@ Graph Data Structure (12)
 -- Find all strongly connected components on a directed Graph
 
 
-Non-coding: (2)
-24 - Adding a single directed edge to a directed graph can reduce the number of weakly connected components, but by at most how many components? What about the number of strongly connected components?
+Non-coding: (1)
 
 30 - Suppose G is a connected undirected graph. An edge whose removal disconnects the graph is called a bridge. Must every bridge e be an edge in a depth-first search tree of G? Give a proof or a counterexample.
 
