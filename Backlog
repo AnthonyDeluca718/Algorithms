@@ -7,3 +7,8 @@
 4-38 - Implement an external sort, which uses intermediate files to sort files bigger than main memory. Mergesort is a good algorithm to base such an implementation on. Test your program both on files with small records and on files with large records.
 
 4-39 - Design and implement a parallel sorting algorithm that distributes data across several processors. An appropriate variation of mergesort is a likely candidate. Measure the speedup of this algorithm as the number of processors increases. Later, compare the execution time to that of a purely sequential mergesort implementation. What are your experiences?
+
+3) Enhanced Dict:
+-- Ordered dict
+-- LRU cache
+In both cases store a linked list of ids. the elements in the dict store a link to their associated node in the linked list
