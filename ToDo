@@ -1,11 +1,57 @@
-==== Chapter 5:
-Pages - 146 to 185 (thumbnails 157 to 196)
-Current Page - 153
+Total: 28
 
-Graph Data Structure
---
---
---
---
---
---
+
+Graph Data Structure (12)
+-- Discovered / Processed
+-- Path between Vertices
+-- Maze Solver
+-- Connected Components
+-- Two Coloring
+-- process vertex before/after we process all outgoing vertices
+-- edge specific processing
+-- But when we encounter edge (x, y) from x, how can we tell if we have previously traversed the edge from y?
+-- finding cycles
+-- articulation vertice
+-- Topological Sort
+-- Find all strongly connected components on a directed Graph
+
+
+Non-coding: (2)
+24 - Adding a single directed edge to a directed graph can reduce the number of weakly connected components, but by at most how many components? What about the number of strongly connected components?
+
+30 - Suppose G is a connected undirected graph. An edge whose removal disconnects the graph is called a bridge. Must every bridge e be an edge in a depth-first search tree of G? Give a proof or a counterexample.
+
+
+Coding: (14)
+12 - The square of a directed graph G = (V, E) is the graph G2 = (V, E2) such that (u,w) ∈ E2 iff there exists v ∈ V such that (u,v) ∈ E and (v,w) ∈ E; i.e., there is a path of exactly two edges from u to w.
+Give efficient algorithms for both adjacency lists and matrices.
+
+15 - A vertex cover of a graph G = (V,E) is a subset of vertices V′ ∈ V such that every edge in E contains at least one vertex from V ′. An independent set of graph G = (V,E) is a subset of vertices V′ ∈ V such that no edge in E contains both vertices from V ′. An independent vertex cover is a subset of vertices that is both an independent set and a vertex cover of G. Give an efficient algorithm for testing whether G contains an independent vertex cover. What classical graph problem does this reduce to?
+
+18 - Consider a set of movies M1, M2, . . . , Mk. There is a set of customers, each one of which indicates the two movies they would like to see this weekend. Movies are shown on Saturday evening and Sunday evening. Multiple movies may be screened at the same time. You must decide which movies should be televised on Saturday and which on Sun- day, so that every customer gets to see the two movies they desire. Is there a schedule where each movie is shown at most once? Design an efficient algorithm to find such a schedule if one exists.
+
+19 - The diameter of a tree T = (V, E) is given by max δ(u,v) u,v∈V (where δ(u, v) is the number of edges on the path from u to v). Describe an efficient algorithm to compute the diameter of a tree, and show the correctness and analyze the running time of your algorithm.
+
+20 - Given an undirected graph G with n vertices and m edges, and an integer k, give an O(m + n) algorithm that finds the maximum induced subgraph H of G such that each vertex in H has degree ≥ k, or prove that no such graph exists. An induced subgraph F = (U, R) of a graph G = (V, E) is a subset of U of the vertices V of G, and all edges R of G such that both vertices of each edge are in U.
+
+21 - Let v and w be two vertices in a directed graph G = (V,E). Design a linear- time algorithm to find the number of different shortest paths (not necessarily vertex disjoint) between v and w. Note: the edges in G are unweighted.
+
+22 - Design a linear-time algorithm to eliminate each vertex v of degree 2 from a graph by replacing edges (u,v) and (v,w) by an edge (u,w). We also seek to eliminate multiple copies of edges by replacing them with a single edge. Note that removing multiple copies of an edge may create a new vertex of degree 2, which has to be removed, and that removing a vertex of degree 2 may create multiple edges, which also must be removed.
+
+23 - Your job is to arrange n ill-behaved children in a straight line, facing front. You are given a list of m statements of the form “i hates j”. If i hates j, then you do not want put i somewhere behind j, because then i is capable of throwing something at j.
+(a) Give an algorithm that orders the line, (or says that it is not possible) in O(m + n) time.
+(b) Suppose instead you want to arrange the children in rows such that if i hates j, then i must be in a lower numbered row    than j. Give an efficient algorithm to find the minimum number of rows needed, if it is possible.
+
+25 - An arborescence of a directed graph G is a rooted tree such that there is a directed path from the root to every other vertex in the graph. Give an efficient and correct algorithm to test whether G contains an arborescence, and its time complexity.
+
+26 -  A mother vertex in a directed graph G = (V, E) is a vertex v such that all other vertices G can be reached by a directed path from v.
+(a) Give an O(n + m) algorithm to test whether a given vertex v is a mother of G, where n = |V | and m = |E|.
+(b) Give an O(n+m) algorithm to test whether graph G contains a mother vertex.
+
+27 - A tournament is a directed graph formed by taking the complete undirected graph and assigning arbitrary directions on the edges—i.e., a graph G = (V,E) such that for all u,v ∈ V, exactly one of (u,v) or (v,u) is in E. Show that every tournament has a Hamiltonian path—that is, a path that visits every vertex exactly once. Give an algorithm to find this path.
+
+28 - An articulation vertex of a graph G is a vertex whose deletion disconnects G. Let G be a graph with n vertices and m edges. Give a simple O(n + m) algorithm for finding a vertex of G that is not an articulation vertex—i.e. , whose deletion does not disconnect G.
+
+29 - Following up on the previous problem, give an O(n + m) algorithm that finds a deletion order for the n vertices such that no deletion disconnects the graph. (Hint: think DFS/BFS.)
+
+32 - Write a function to traverse binary search tree and return the ith node in sorted order.
