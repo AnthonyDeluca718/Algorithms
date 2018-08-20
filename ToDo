@@ -5,13 +5,16 @@ Code Improvement (3)
 -- process vertex before/after we process all outgoing vertices
 -- edge specific processing
 
-Problems: (7)
+Problems: (8)
 -- Shortest path between Vertices
 -- Maze Solver
 -- Two Coloring
 -- Finding cycles (But when we encounter edge (x, y) from x, how can we tell if we have previously traversed the edge from y?)
 -- Topological Sort
--- Find all strongly connected components on a directed Graph
+-- Tarjan Algorithm
+-- Kosaraju
+
+
 
 
 Coding: (8)
